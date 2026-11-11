@@ -1,0 +1,1604 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/SimpleBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/StreetLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/trees/protos/SimpleTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/tesla/TeslaModel3.proto"
+
+WorldInfo {
+  info [
+    "CSEN934 Design of Autonomous Systems - Milestone 01"
+    "Straight urban road lined with buildings for odometry, EKF and SLAM experiments."
+  ]
+  title "city"
+  basicTimeStep 10
+  coordinateSystem "ENU"
+}
+Viewpoint {
+  orientation 0 1 0 0.35
+  position -16 0 8
+  follow "Tesla"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 640 0 0
+  size 1600 300
+  tileSize 2 2
+  appearance Grass {
+  }
+}
+StraightRoadSegment {
+  translation -60.0 0 0.01
+  name "main road"
+  width 7
+  numberOfLanes 2
+  length 1400.0
+  rightBorder TRUE
+  leftBorder TRUE
+}
+SimpleBuilding {
+  translation -29.85 14.70 0
+  name "building(0)"
+  floorNumber 4
+  corners [10.15 5.01, 10.15 -5.01, -10.15 -5.01, -10.15 5.01]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation -1.38 17.78 0
+  name "building(1)"
+  floorNumber 7
+  corners [11.03 6.78, 11.03 -6.78, -11.03 -6.78, -11.03 6.78]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 34.72 18.65 0
+  name "building(2)"
+  floorNumber 7
+  corners [14.80 8.48, 14.80 -8.48, -14.80 -8.48, -14.80 8.48]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 74.33 19.25 0
+  name "building(3)"
+  floorNumber 4
+  corners [12.16 7.69, 12.16 -7.69, -12.16 -7.69, -12.16 7.69]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 105.83 21.13 0
+  name "building(4)"
+  floorNumber 3
+  corners [11.59 9.20, 11.59 -9.20, -11.59 -9.20, -11.59 9.20]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 135.03 19.57 0
+  name "building(5)"
+  floorNumber 6
+  corners [12.66 8.52, 12.66 -8.52, -12.66 -8.52, -12.66 8.52]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 161.80 18.95 0
+  name "building(6)"
+  floorNumber 8
+  corners [6.34 7.46, 6.34 -7.46, -6.34 -7.46, -6.34 7.46]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 186.51 17.31 0
+  name "building(7)"
+  floorNumber 6
+  corners [9.65 6.25, 9.65 -6.25, -9.65 -6.25, -9.65 6.25]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 218.39 17.55 0
+  name "building(8)"
+  floorNumber 7
+  corners [11.69 6.96, 11.69 -6.96, -11.69 -6.96, -11.69 6.96]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 254.80 18.32 0
+  name "building(9)"
+  floorNumber 6
+  corners [11.86 7.00, 11.86 -7.00, -11.86 -7.00, -11.86 7.00]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 292.05 17.30 0
+  name "building(10)"
+  floorNumber 5
+  corners [11.75 5.65, 11.75 -5.65, -11.75 -5.65, -11.75 5.65]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 326.70 18.69 0
+  name "building(11)"
+  floorNumber 3
+  corners [14.46 6.98, 14.46 -6.98, -14.46 -6.98, -14.46 6.98]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 360.13 18.66 0
+  name "building(12)"
+  floorNumber 7
+  corners [8.28 6.84, 8.28 -6.84, -8.28 -6.84, -8.28 6.84]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 391.57 17.00 0
+  name "building(13)"
+  floorNumber 4
+  corners [12.76 5.52, 12.76 -5.52, -12.76 -5.52, -12.76 5.52]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 427.31 16.29 0
+  name "building(14)"
+  floorNumber 4
+  corners [13.04 5.97, 13.04 -5.97, -13.04 -5.97, -13.04 5.97]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 456.36 17.58 0
+  name "building(15)"
+  floorNumber 5
+  corners [10.75 6.50, 10.75 -6.50, -10.75 -6.50, -10.75 6.50]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 484.29 17.00 0
+  name "building(16)"
+  floorNumber 4
+  corners [12.11 5.41, 12.11 -5.41, -12.11 -5.41, -12.11 5.41]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 512.01 17.23 0
+  name "building(17)"
+  floorNumber 6
+  corners [10.70 6.66, 10.70 -6.66, -10.70 -6.66, -10.70 6.66]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 546.86 16.59 0
+  name "building(18)"
+  floorNumber 5
+  corners [10.57 5.34, 10.57 -5.34, -10.57 -5.34, -10.57 5.34]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 579.80 16.26 0
+  name "building(19)"
+  floorNumber 7
+  corners [10.45 5.10, 10.45 -5.10, -10.45 -5.10, -10.45 5.10]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 607.71 19.03 0
+  name "building(20)"
+  floorNumber 3
+  corners [6.57 7.50, 6.57 -7.50, -6.57 -7.50, -6.57 7.50]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 628.53 18.63 0
+  name "building(21)"
+  floorNumber 2
+  corners [8.71 9.05, 8.71 -9.05, -8.71 -9.05, -8.71 9.05]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 657.55 18.26 0
+  name "building(22)"
+  floorNumber 3
+  corners [6.51 8.45, 6.51 -8.45, -6.51 -8.45, -6.51 8.45]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 684.60 15.47 0
+  name "building(23)"
+  floorNumber 4
+  corners [11.76 5.55, 11.76 -5.55, -11.76 -5.55, -11.76 5.55]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 715.82 19.29 0
+  name "building(24)"
+  floorNumber 7
+  corners [13.03 8.61, 13.03 -8.61, -13.03 -8.61, -13.03 8.61]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 742.94 19.69 0
+  name "building(25)"
+  floorNumber 2
+  corners [6.84 9.68, 6.84 -9.68, -6.84 -9.68, -6.84 9.68]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 768.77 19.50 0
+  name "building(26)"
+  floorNumber 8
+  corners [7.30 9.66, 7.30 -9.66, -7.30 -9.66, -7.30 9.66]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 799.96 19.04 0
+  name "building(27)"
+  floorNumber 3
+  corners [12.41 7.91, 12.41 -7.91, -12.41 -7.91, -12.41 7.91]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 833.70 17.60 0
+  name "building(28)"
+  floorNumber 7
+  corners [8.14 7.36, 8.14 -7.36, -8.14 -7.36, -8.14 7.36]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 860.75 18.87 0
+  name "building(29)"
+  floorNumber 7
+  corners [12.89 6.95, 12.89 -6.95, -12.89 -6.95, -12.89 6.95]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 895.39 17.64 0
+  name "building(30)"
+  floorNumber 4
+  corners [7.94 6.52, 7.94 -6.52, -7.94 -6.52, -7.94 6.52]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 930.45 19.98 0
+  name "building(31)"
+  floorNumber 8
+  corners [14.06 9.70, 14.06 -9.70, -14.06 -9.70, -14.06 9.70]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 967.76 15.82 0
+  name "building(32)"
+  floorNumber 6
+  corners [10.21 5.99, 10.21 -5.99, -10.21 -5.99, -10.21 5.99]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1000.20 17.10 0
+  name "building(33)"
+  floorNumber 4
+  corners [9.90 7.40, 9.90 -7.40, -9.90 -7.40, -9.90 7.40]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1035.41 18.00 0
+  name "building(34)"
+  floorNumber 6
+  corners [11.80 6.67, 11.80 -6.67, -11.80 -6.67, -11.80 6.67]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1066.04 15.88 0
+  name "building(35)"
+  floorNumber 2
+  corners [10.59 5.40, 10.59 -5.40, -10.59 -5.40, -10.59 5.40]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1097.59 18.18 0
+  name "building(36)"
+  floorNumber 8
+  corners [11.20 7.25, 11.20 -7.25, -11.20 -7.25, -11.20 7.25]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1126.55 21.11 0
+  name "building(37)"
+  floorNumber 6
+  corners [7.78 9.88, 7.78 -9.88, -7.78 -9.88, -7.78 9.88]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1158.54 19.58 0
+  name "building(38)"
+  floorNumber 6
+  corners [14.18 7.73, 14.18 -7.73, -14.18 -7.73, -14.18 7.73]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1195.06 21.29 0
+  name "building(39)"
+  floorNumber 7
+  corners [8.88 9.93, 8.88 -9.93, -8.88 -9.93, -8.88 9.93]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1228.03 19.00 0
+  name "building(40)"
+  floorNumber 7
+  corners [14.92 9.48, 14.92 -9.48, -14.92 -9.48, -14.92 9.48]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1264.62 15.65 0
+  name "building(41)"
+  floorNumber 5
+  corners [9.86 5.84, 9.86 -5.84, -9.86 -5.84, -9.86 5.84]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1297.85 20.44 0
+  name "building(42)"
+  floorNumber 8
+  corners [12.54 9.90, 12.54 -9.90, -12.54 -9.90, -12.54 9.90]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation -27.37 -20.30 0
+  name "building(43)"
+  floorNumber 5
+  corners [12.63 9.24, 12.63 -9.24, -12.63 -9.24, -12.63 9.24]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 5.80 -16.75 0
+  name "building(44)"
+  floorNumber 6
+  corners [13.46 6.00, 13.46 -6.00, -13.46 -6.00, -13.46 6.00]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 34.38 -16.96 0
+  name "building(45)"
+  floorNumber 8
+  corners [6.78 6.85, 6.78 -6.85, -6.78 -6.85, -6.78 6.85]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 60.71 -18.73 0
+  name "building(46)"
+  floorNumber 4
+  corners [14.00 8.39, 14.00 -8.39, -14.00 -8.39, -14.00 8.39]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 90.74 -15.61 0
+  name "building(47)"
+  floorNumber 7
+  corners [10.05 5.24, 10.05 -5.24, -10.05 -5.24, -10.05 5.24]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 122.23 -20.72 0
+  name "building(48)"
+  floorNumber 8
+  corners [8.53 9.37, 8.53 -9.37, -8.53 -9.37, -8.53 9.37]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 150.21 -19.24 0
+  name "building(49)"
+  floorNumber 3
+  corners [14.04 7.66, 14.04 -7.66, -14.04 -7.66, -14.04 7.66]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 187.33 -14.98 0
+  name "building(50)"
+  floorNumber 4
+  corners [14.04 5.04, 14.04 -5.04, -14.04 -5.04, -14.04 5.04]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 222.21 -17.24 0
+  name "building(51)"
+  floorNumber 5
+  corners [11.20 5.60, 11.20 -5.60, -11.20 -5.60, -11.20 5.60]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 255.49 -15.92 0
+  name "building(52)"
+  floorNumber 3
+  corners [13.87 5.40, 13.87 -5.40, -13.87 -5.40, -13.87 5.40]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 281.84 -14.56 0
+  name "building(53)"
+  floorNumber 2
+  corners [7.50 5.03, 7.50 -5.03, -7.50 -5.03, -7.50 5.03]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 311.14 -16.51 0
+  name "building(54)"
+  floorNumber 2
+  corners [12.80 5.28, 12.80 -5.28, -12.80 -5.28, -12.80 5.28]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 347.73 -16.72 0
+  name "building(55)"
+  floorNumber 5
+  corners [11.22 5.98, 11.22 -5.98, -11.22 -5.98, -11.22 5.98]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 382.60 -16.58 0
+  name "building(56)"
+  floorNumber 3
+  corners [13.85 5.68, 13.85 -5.68, -13.85 -5.68, -13.85 5.68]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 420.79 -18.55 0
+  name "building(57)"
+  floorNumber 5
+  corners [11.86 8.39, 11.86 -8.39, -11.86 -8.39, -11.86 8.39]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 458.02 -18.09 0
+  name "building(58)"
+  floorNumber 8
+  corners [12.11 6.94, 12.11 -6.94, -12.11 -6.94, -12.11 6.94]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 492.81 -18.18 0
+  name "building(59)"
+  floorNumber 2
+  corners [12.18 7.22, 12.18 -7.22, -12.18 -7.22, -12.18 7.22]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 517.76 -18.36 0
+  name "building(60)"
+  floorNumber 2
+  corners [8.36 7.68, 8.36 -7.68, -8.36 -7.68, -8.36 7.68]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 553.81 -20.42 0
+  name "building(61)"
+  floorNumber 4
+  corners [14.94 9.03, 14.94 -9.03, -14.94 -9.03, -14.94 9.03]
+  wallType "old brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 593.23 -19.82 0
+  name "building(62)"
+  floorNumber 7
+  corners [12.96 9.81, 12.96 -9.81, -12.96 -9.81, -12.96 9.81]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 623.97 -16.50 0
+  name "building(63)"
+  floorNumber 2
+  corners [13.69 6.86, 13.69 -6.86, -13.69 -6.86, -13.69 6.86]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 656.52 -21.73 0
+  name "building(64)"
+  floorNumber 8
+  corners [13.77 9.87, 13.77 -9.87, -13.77 -9.87, -13.77 9.87]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 686.45 -16.95 0
+  name "building(65)"
+  floorNumber 8
+  corners [6.10 5.47, 6.10 -5.47, -6.10 -5.47, -6.10 5.47]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 707.44 -19.16 0
+  name "building(66)"
+  floorNumber 8
+  corners [8.89 8.74, 8.89 -8.74, -8.89 -8.74, -8.89 8.74]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 738.19 -17.22 0
+  name "building(67)"
+  floorNumber 6
+  corners [10.19 5.43, 10.19 -5.43, -10.19 -5.43, -10.19 5.43]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 765.20 -17.43 0
+  name "building(68)"
+  floorNumber 6
+  corners [6.43 5.48, 6.43 -5.48, -6.43 -5.48, -6.43 5.48]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 792.40 -17.76 0
+  name "building(69)"
+  floorNumber 5
+  corners [11.36 6.21, 11.36 -6.21, -11.36 -6.21, -11.36 6.21]
+  wallType "classic building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 828.03 -17.89 0
+  name "building(70)"
+  floorNumber 6
+  corners [12.05 7.27, 12.05 -7.27, -12.05 -7.27, -12.05 7.27]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 859.82 -16.56 0
+  name "building(71)"
+  floorNumber 2
+  corners [8.49 6.37, 8.49 -6.37, -8.49 -6.37, -8.49 6.37]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 891.24 -18.77 0
+  name "building(72)"
+  floorNumber 7
+  corners [13.23 8.01, 13.23 -8.01, -13.23 -8.01, -13.23 8.01]
+  wallType "brick building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 923.11 -17.73 0
+  name "building(73)"
+  floorNumber 5
+  corners [6.11 8.14, 6.11 -8.14, -6.11 -8.14, -6.11 8.14]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 945.28 -15.24 0
+  name "building(74)"
+  floorNumber 8
+  corners [8.91 5.32, 8.91 -5.32, -8.91 -5.32, -8.91 5.32]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 973.16 -15.89 0
+  name "building(75)"
+  floorNumber 2
+  corners [7.57 6.35, 7.57 -6.35, -7.57 -6.35, -7.57 6.35]
+  wallType "concrete building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 996.04 -15.42 0
+  name "building(76)"
+  floorNumber 7
+  corners [11.11 5.18, 11.11 -5.18, -11.11 -5.18, -11.11 5.18]
+  wallType "office building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1030.26 -20.17 0
+  name "building(77)"
+  floorNumber 2
+  corners [12.24 9.85, 12.24 -9.85, -12.24 -9.85, -12.24 9.85]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1063.55 -16.20 0
+  name "building(78)"
+  floorNumber 4
+  corners [9.29 6.54, 9.29 -6.54, -9.29 -6.54, -9.29 6.54]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1089.60 -18.39 0
+  name "building(79)"
+  floorNumber 2
+  corners [6.80 7.82, 6.80 -7.82, -6.80 -7.82, -6.80 7.82]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1113.59 -17.11 0
+  name "building(80)"
+  floorNumber 3
+  corners [9.58 7.32, 9.58 -7.32, -9.58 -7.32, -9.58 7.32]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1138.27 -14.81 0
+  name "building(81)"
+  floorNumber 7
+  corners [7.34 5.07, 7.34 -5.07, -7.34 -5.07, -7.34 5.07]
+  wallType "glass building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1170.40 -16.38 0
+  name "building(82)"
+  floorNumber 5
+  corners [11.04 5.04, 11.04 -5.04, -11.04 -5.04, -11.04 5.04]
+  wallType "residential building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1201.23 -17.85 0
+  name "building(83)"
+  floorNumber 5
+  corners [7.67 6.38, 7.67 -6.38, -7.67 -6.38, -7.67 6.38]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1224.47 -15.80 0
+  name "building(84)"
+  floorNumber 7
+  corners [6.49 5.64, 6.49 -5.64, -6.49 -5.64, -6.49 5.64]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1253.85 -16.78 0
+  name "building(85)"
+  floorNumber 7
+  corners [13.31 5.26, 13.31 -5.26, -13.31 -5.26, -13.31 5.26]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+SimpleBuilding {
+  translation 1286.98 -19.53 0
+  name "building(86)"
+  floorNumber 6
+  corners [11.28 9.35, 11.28 -9.35, -11.28 -9.35, -11.28 9.35]
+  wallType "orange building"
+  roofShape "flat roof"
+}
+StreetLight {
+  translation -40 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(0)"
+  on FALSE
+}
+StreetLight {
+  translation -23 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(1)"
+  on FALSE
+}
+StreetLight {
+  translation -5 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(2)"
+  on FALSE
+}
+StreetLight {
+  translation 12 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(3)"
+  on FALSE
+}
+StreetLight {
+  translation 30 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(4)"
+  on FALSE
+}
+StreetLight {
+  translation 47 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(5)"
+  on FALSE
+}
+StreetLight {
+  translation 65 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(6)"
+  on FALSE
+}
+StreetLight {
+  translation 82 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(7)"
+  on FALSE
+}
+StreetLight {
+  translation 100 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(8)"
+  on FALSE
+}
+StreetLight {
+  translation 117 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(9)"
+  on FALSE
+}
+StreetLight {
+  translation 135 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(10)"
+  on FALSE
+}
+StreetLight {
+  translation 152 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(11)"
+  on FALSE
+}
+StreetLight {
+  translation 170 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(12)"
+  on FALSE
+}
+StreetLight {
+  translation 187 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(13)"
+  on FALSE
+}
+StreetLight {
+  translation 205 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(14)"
+  on FALSE
+}
+StreetLight {
+  translation 222 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(15)"
+  on FALSE
+}
+StreetLight {
+  translation 240 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(16)"
+  on FALSE
+}
+StreetLight {
+  translation 257 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(17)"
+  on FALSE
+}
+StreetLight {
+  translation 275 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(18)"
+  on FALSE
+}
+StreetLight {
+  translation 292 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(19)"
+  on FALSE
+}
+StreetLight {
+  translation 310 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(20)"
+  on FALSE
+}
+StreetLight {
+  translation 327 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(21)"
+  on FALSE
+}
+StreetLight {
+  translation 345 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(22)"
+  on FALSE
+}
+StreetLight {
+  translation 362 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(23)"
+  on FALSE
+}
+StreetLight {
+  translation 380 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(24)"
+  on FALSE
+}
+StreetLight {
+  translation 397 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(25)"
+  on FALSE
+}
+StreetLight {
+  translation 415 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(26)"
+  on FALSE
+}
+StreetLight {
+  translation 432 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(27)"
+  on FALSE
+}
+StreetLight {
+  translation 450 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(28)"
+  on FALSE
+}
+StreetLight {
+  translation 467 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(29)"
+  on FALSE
+}
+StreetLight {
+  translation 485 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(30)"
+  on FALSE
+}
+StreetLight {
+  translation 502 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(31)"
+  on FALSE
+}
+StreetLight {
+  translation 520 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(32)"
+  on FALSE
+}
+StreetLight {
+  translation 537 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(33)"
+  on FALSE
+}
+StreetLight {
+  translation 555 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(34)"
+  on FALSE
+}
+StreetLight {
+  translation 572 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(35)"
+  on FALSE
+}
+StreetLight {
+  translation 590 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(36)"
+  on FALSE
+}
+StreetLight {
+  translation 607 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(37)"
+  on FALSE
+}
+StreetLight {
+  translation 625 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(38)"
+  on FALSE
+}
+StreetLight {
+  translation 642 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(39)"
+  on FALSE
+}
+StreetLight {
+  translation 660 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(40)"
+  on FALSE
+}
+StreetLight {
+  translation 677 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(41)"
+  on FALSE
+}
+StreetLight {
+  translation 695 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(42)"
+  on FALSE
+}
+StreetLight {
+  translation 712 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(43)"
+  on FALSE
+}
+StreetLight {
+  translation 730 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(44)"
+  on FALSE
+}
+StreetLight {
+  translation 747 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(45)"
+  on FALSE
+}
+StreetLight {
+  translation 765 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(46)"
+  on FALSE
+}
+StreetLight {
+  translation 782 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(47)"
+  on FALSE
+}
+StreetLight {
+  translation 800 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(48)"
+  on FALSE
+}
+StreetLight {
+  translation 817 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(49)"
+  on FALSE
+}
+StreetLight {
+  translation 835 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(50)"
+  on FALSE
+}
+StreetLight {
+  translation 852 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(51)"
+  on FALSE
+}
+StreetLight {
+  translation 870 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(52)"
+  on FALSE
+}
+StreetLight {
+  translation 887 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(53)"
+  on FALSE
+}
+StreetLight {
+  translation 905 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(54)"
+  on FALSE
+}
+StreetLight {
+  translation 922 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(55)"
+  on FALSE
+}
+StreetLight {
+  translation 940 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(56)"
+  on FALSE
+}
+StreetLight {
+  translation 957 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(57)"
+  on FALSE
+}
+StreetLight {
+  translation 975 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(58)"
+  on FALSE
+}
+StreetLight {
+  translation 992 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(59)"
+  on FALSE
+}
+StreetLight {
+  translation 1010 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(60)"
+  on FALSE
+}
+StreetLight {
+  translation 1027 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(61)"
+  on FALSE
+}
+StreetLight {
+  translation 1045 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(62)"
+  on FALSE
+}
+StreetLight {
+  translation 1062 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(63)"
+  on FALSE
+}
+StreetLight {
+  translation 1080 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(64)"
+  on FALSE
+}
+StreetLight {
+  translation 1097 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(65)"
+  on FALSE
+}
+StreetLight {
+  translation 1115 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(66)"
+  on FALSE
+}
+StreetLight {
+  translation 1132 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(67)"
+  on FALSE
+}
+StreetLight {
+  translation 1150 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(68)"
+  on FALSE
+}
+StreetLight {
+  translation 1167 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(69)"
+  on FALSE
+}
+StreetLight {
+  translation 1185 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(70)"
+  on FALSE
+}
+StreetLight {
+  translation 1202 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(71)"
+  on FALSE
+}
+StreetLight {
+  translation 1220 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(72)"
+  on FALSE
+}
+StreetLight {
+  translation 1237 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(73)"
+  on FALSE
+}
+StreetLight {
+  translation 1255 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(74)"
+  on FALSE
+}
+StreetLight {
+  translation 1272 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(75)"
+  on FALSE
+}
+StreetLight {
+  translation 1290 8.0 0
+  rotation 0 0 1 -1.5708
+  name "street light(76)"
+  on FALSE
+}
+StreetLight {
+  translation 1307 -8.0 0
+  rotation 0 0 1 1.5708
+  name "street light(77)"
+  on FALSE
+}
+SimpleTree {
+  translation -17.87 8.83 0
+  name "tree(0)"
+  type "oak tree"
+  height 7.7
+  radius 1.9
+}
+SimpleTree {
+  translation -21.68 -8.64 0
+  name "tree(1)"
+  type "oak tree"
+  height 6.7
+  radius 2.5
+}
+SimpleTree {
+  translation 38.00 8.53 0
+  name "tree(2)"
+  type "oak tree"
+  height 6.8
+  radius 2.2
+}
+SimpleTree {
+  translation 33.32 -8.57 0
+  name "tree(3)"
+  type "oak tree"
+  height 7.9
+  radius 1.8
+}
+SimpleTree {
+  translation 92.33 9.00 0
+  name "tree(4)"
+  type "oak tree"
+  height 6.0
+  radius 2.1
+}
+SimpleTree {
+  translation 91.17 -8.79 0
+  name "tree(5)"
+  type "oak tree"
+  height 6.5
+  radius 2.4
+}
+SimpleTree {
+  translation 145.01 8.83 0
+  name "tree(6)"
+  type "oak tree"
+  height 5.6
+  radius 1.6
+}
+SimpleTree {
+  translation 149.14 -8.98 0
+  name "tree(7)"
+  type "oak tree"
+  height 7.2
+  radius 2.2
+}
+SimpleTree {
+  translation 197.61 8.61 0
+  name "tree(8)"
+  type "oak tree"
+  height 5.4
+  radius 1.7
+}
+SimpleTree {
+  translation 197.98 -8.71 0
+  name "tree(9)"
+  type "oak tree"
+  height 5.5
+  radius 1.5
+}
+SimpleTree {
+  translation 256.13 8.82 0
+  name "tree(10)"
+  type "oak tree"
+  height 5.8
+  radius 1.7
+}
+SimpleTree {
+  translation 253.51 -8.42 0
+  name "tree(11)"
+  type "oak tree"
+  height 6.0
+  radius 1.7
+}
+SimpleTree {
+  translation 311.04 8.92 0
+  name "tree(12)"
+  type "oak tree"
+  height 5.0
+  radius 1.7
+}
+SimpleTree {
+  translation 312.26 -8.62 0
+  name "tree(13)"
+  type "oak tree"
+  height 5.3
+  radius 2.1
+}
+SimpleTree {
+  translation 365.39 8.96 0
+  name "tree(14)"
+  type "oak tree"
+  height 5.1
+  radius 1.5
+}
+SimpleTree {
+  translation 364.23 -8.57 0
+  name "tree(15)"
+  type "oak tree"
+  height 6.8
+  radius 2.2
+}
+SimpleTree {
+  translation 424.63 8.64 0
+  name "tree(16)"
+  type "oak tree"
+  height 6.8
+  radius 2.4
+}
+SimpleTree {
+  translation 420.07 -8.95 0
+  name "tree(17)"
+  type "oak tree"
+  height 5.7
+  radius 1.8
+}
+SimpleTree {
+  translation 473.42 8.71 0
+  name "tree(18)"
+  type "oak tree"
+  height 6.5
+  radius 1.6
+}
+SimpleTree {
+  translation 473.70 -8.54 0
+  name "tree(19)"
+  type "oak tree"
+  height 7.7
+  radius 1.7
+}
+SimpleTree {
+  translation 530.56 8.89 0
+  name "tree(20)"
+  type "oak tree"
+  height 7.0
+  radius 1.9
+}
+SimpleTree {
+  translation 527.97 -8.45 0
+  name "tree(21)"
+  type "oak tree"
+  height 8.0
+  radius 1.5
+}
+SimpleTree {
+  translation 583.64 8.69 0
+  name "tree(22)"
+  type "oak tree"
+  height 6.7
+  radius 1.7
+}
+SimpleTree {
+  translation 586.30 -8.67 0
+  name "tree(23)"
+  type "oak tree"
+  height 6.3
+  radius 2.1
+}
+SimpleTree {
+  translation 643.13 8.83 0
+  name "tree(24)"
+  type "oak tree"
+  height 6.4
+  radius 1.9
+}
+SimpleTree {
+  translation 637.84 -8.75 0
+  name "tree(25)"
+  type "oak tree"
+  height 6.6
+  radius 1.5
+}
+SimpleTree {
+  translation 692.41 8.66 0
+  name "tree(26)"
+  type "oak tree"
+  height 7.0
+  radius 1.8
+}
+SimpleTree {
+  translation 694.97 -8.96 0
+  name "tree(27)"
+  type "oak tree"
+  height 5.9
+  radius 2.3
+}
+SimpleTree {
+  translation 751.33 8.84 0
+  name "tree(28)"
+  type "oak tree"
+  height 7.8
+  radius 2.0
+}
+SimpleTree {
+  translation 746.65 -8.55 0
+  name "tree(29)"
+  type "oak tree"
+  height 5.6
+  radius 2.5
+}
+SimpleTree {
+  translation 802.19 8.84 0
+  name "tree(30)"
+  type "oak tree"
+  height 5.5
+  radius 2.1
+}
+SimpleTree {
+  translation 800.75 -8.69 0
+  name "tree(31)"
+  type "oak tree"
+  height 5.9
+  radius 2.1
+}
+SimpleTree {
+  translation 860.77 8.71 0
+  name "tree(32)"
+  type "oak tree"
+  height 5.5
+  radius 2.4
+}
+SimpleTree {
+  translation 862.93 -8.92 0
+  name "tree(33)"
+  type "oak tree"
+  height 5.7
+  radius 1.7
+}
+SimpleTree {
+  translation 914.25 8.92 0
+  name "tree(34)"
+  type "oak tree"
+  height 7.1
+  radius 2.4
+}
+SimpleTree {
+  translation 913.83 -8.64 0
+  name "tree(35)"
+  type "oak tree"
+  height 7.4
+  radius 2.0
+}
+SimpleTree {
+  translation 967.25 8.85 0
+  name "tree(36)"
+  type "oak tree"
+  height 6.5
+  radius 1.7
+}
+SimpleTree {
+  translation 968.34 -8.95 0
+  name "tree(37)"
+  type "oak tree"
+  height 5.8
+  radius 1.5
+}
+SimpleTree {
+  translation 1020.61 8.56 0
+  name "tree(38)"
+  type "oak tree"
+  height 6.7
+  radius 2.4
+}
+SimpleTree {
+  translation 1027.80 -8.94 0
+  name "tree(39)"
+  type "oak tree"
+  height 7.4
+  radius 2.4
+}
+SimpleTree {
+  translation 1075.21 8.99 0
+  name "tree(40)"
+  type "oak tree"
+  height 6.1
+  radius 1.8
+}
+SimpleTree {
+  translation 1083.22 -8.69 0
+  name "tree(41)"
+  type "oak tree"
+  height 6.5
+  radius 1.7
+}
+SimpleTree {
+  translation 1130.87 8.50 0
+  name "tree(42)"
+  type "oak tree"
+  height 5.5
+  radius 1.6
+}
+SimpleTree {
+  translation 1135.37 -8.41 0
+  name "tree(43)"
+  type "oak tree"
+  height 7.6
+  radius 2.0
+}
+SimpleTree {
+  translation 1185.66 8.40 0
+  name "tree(44)"
+  type "oak tree"
+  height 7.5
+  radius 1.6
+}
+SimpleTree {
+  translation 1187.98 -8.65 0
+  name "tree(45)"
+  type "oak tree"
+  height 6.7
+  radius 2.1
+}
+SimpleTree {
+  translation 1249.75 8.54 0
+  name "tree(46)"
+  type "oak tree"
+  height 7.9
+  radius 2.0
+}
+SimpleTree {
+  translation 1244.20 -8.97 0
+  name "tree(47)"
+  type "oak tree"
+  height 5.5
+  radius 2.2
+}
+SimpleTree {
+  translation 1299.22 8.43 0
+  name "tree(48)"
+  type "oak tree"
+  height 6.8
+  radius 1.6
+}
+SimpleTree {
+  translation 1304.81 -8.69 0
+  name "tree(49)"
+  type "oak tree"
+  height 7.0
+  radius 2.0
+}
+TeslaModel3 {
+  translation 0 -1.75 0.4
+  rotation 0 0 1 0
+  name "Tesla"
+  controller "CSEN934_Test_OL_Sensors"
+  supervisor TRUE
+  sensorsSlotTop [
+    Lidar {
+      translation 0 0 0.35
+      name "lidar"
+      horizontalResolution 1800
+      fieldOfView 6.28318
+      verticalFieldOfView 0.5236
+      numberOfLayers 16
+      near 0.1
+      minRange 2.5
+      maxRange 100
+      type "fixed"
+      projection "cylindrical"
+      noise 0
+      defaultFrequency 10
+      minFrequency 5
+      maxFrequency 20
+    }
+    InertialUnit {
+      translation 0 0 0.35
+      name "inertial unit"
+    }
+    Gyro {
+      translation 0 0 0.35
+      name "gyro"
+    }
+    Accelerometer {
+      translation 0 0 0.35
+      name "accelerometer"
+    }
+  ]
+  sensorsSlotCenter [
+    GPS {
+      name "gps"
+    }
+  ]
+}

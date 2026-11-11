@@ -1,0 +1,17 @@
+# Slices the 3D lidar cloud into a 2D LaserScan for the 2D SLAM trials.
+# Heights are relative to lidar_link: keep the slice above the road surface
+# (lidar is usually ~1.5-2 m above the ground on the car roof).
+pointcloud_to_laserscan:
+  ros__parameters:
+    target_frame: ''          # '' = keep the cloud's own frame (lidar_link)
+    transform_tolerance: 0.05
+    min_height: -0.8
+    max_height: 1.0
+    angle_min: -3.14159
+    angle_max: 3.14159
+    angle_increment: 0.00436  # 0.25 deg
+    scan_time: 0.1
+    range_min: 1.0
+    range_max: 80.0
+    use_inf: true
+    inf_epsilon: 1.0

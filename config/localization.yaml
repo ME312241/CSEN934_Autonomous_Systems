@@ -1,0 +1,32 @@
+# Parameters for the Milestone 01 localization pipeline.
+Control_Node:
+  ros__parameters:
+    velocity: 10.0          # m/s  (milestone spec)
+    steering_angle: 0.0     # rad  (milestone spec)
+    publish_rate: 20.0
+
+Localization_Add_Noise_Node:
+  ros__parameters:
+    sigma_xy: 0.3           # m
+    sigma_yaw_deg: 1.0      # deg
+    sigma_v: 0.3            # m/s
+    sigma_w_deg: 1.0        # deg/s
+    seed: 42                # fixed for reproducible report figures; -1 = random
+
+Localization_EKF_Node:
+  ros__parameters:
+    wheelbase: 2.94                      # m, Webots TeslaModel3 PROTO
+    velocity_time_constant: 1.0          # s
+    # continuous-time process noise (per second): x, y, yaw, v, w
+    process_noise: [0.02, 0.02, 0.0005, 2.0, 0.05]
+    max_dt: 1.0
+    publish_tf: false                    # true only if Tesla_Node publish_tf is false
+    odom_frame: odom
+    base_frame: base_link
+
+Visualization_Helper_Node:
+  ros__parameters:
+    path_min_distance: 0.5
+    rmse_log_period: 5.0
+    slam_frame: map
+    base_frame: base_link
